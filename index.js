@@ -27,7 +27,7 @@ const upload = multer({ dest: "uploads/" });
 const PORT = process.env.PORT || 8000;
 
 app.get("/", async (req, res) => {
-  res.send(`meow , api works !!`);
+  res.send(`API started now you can upload your csv file to /upload using postman or any other tool`);
 });
 
 app.post("/upload", upload.single("csv"), processCSV);
